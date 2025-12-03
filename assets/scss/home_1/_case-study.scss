@@ -1,0 +1,137 @@
+.tc-case-study-sec {
+	overflow: hidden;
+	margin-left: 24px;
+	margin-right: 24px;
+	border-radius: 20px;
+	@media #{$xxl,$xl,$lg,$md,$sm,$xs,$xxs} {
+		margin-left: 0;
+		margin-right: 0;
+	}
+}
+.tc-case-bg {
+	height: 560px;
+	overflow: hidden;
+	background-color: #0D2665;
+	video {
+		opacity: .48;
+	}
+	.item-text {
+		left: 0;
+		right: 0;
+		bottom: -50px;
+		position: absolute;
+		text-align: center;
+		h2 {
+			color: #fff;
+			font-size: 120px;
+			font-weight: 700;
+			letter-spacing: -2px;
+		}
+	}
+}
+.tc-case-top {
+	gap: 30px;
+	margin: 0 auto;
+	max-width: 1350px;
+	padding-left: 15px;
+	padding-right: 15px;
+	.item-text {
+		max-width: 757px;
+	}
+	.tc-btn1 {
+		a {
+			background: #0D2665;	
+		}
+	}
+}
+.tc-case-content {
+	padding-top: 28px;
+	background-color: #E0EAFF;
+}
+.tc-case-item-wrap {
+	border-top: 1px solid rgba(3, 15, 43, .16);
+}
+.tc-case-slider {
+	margin-right: -150px;
+	@media #{$md,$sm,$xs,$xxs} {
+		margin-right: 0;
+	}
+}
+.tc-case-item {
+	padding: 28px;
+	border-right: 1px solid #BDC7DD;
+	.item-img {
+		overflow: hidden;
+		border-radius: 12px;
+		img {
+			transition: all 500ms ease-in-out;
+		}
+	}
+	.item-text {
+		left: 0;
+		right: 0;
+		bottom: 40px;
+		margin: 0 auto;
+		max-width: 408px;
+		position: absolute;
+		@media #{$md,$sm,$xs,$xxs} {
+			max-width: 100%;
+			position: static;
+		}
+		.inner-text {
+			opacity: 0;
+			padding: 25px 30px;
+			border-radius: 12px;
+			margin-bottom: 4px;
+			background-color: #fff;
+			transform: translateY(30px);
+			transition: 1000ms cubic-bezier(0.5, -0.75, 0.3, 2.5);
+			@media #{$md,$sm,$xs,$xxs} {
+				opacity: 1;
+				transform: translateY(0px);
+			}
+			h3 {
+				font-size: 22px;
+				font-weight: 600;
+				letter-spacing: -1px;
+				padding-bottom: 10px;
+			}
+		}
+		.cs_btn {
+			color: #fff;
+			width: 100%;
+			padding: 15px;
+			font-weight: 600;
+			text-align: center;
+			border-radius: 8px;
+			background-color: #135CFD;
+			opacity: 0;
+			transform: translateY(-30px);
+			font-family: var(--tc-heading);
+			transition: 1000ms cubic-bezier(0.5, -0.75, 0.3, 2.5);
+			@media #{$md,$sm,$xs,$xxs} {
+				opacity: 1;
+				transform: translateY(0px);
+			}
+		}
+	}
+	&:hover {
+		.item-text {
+			.inner-text {
+				opacity: 1;
+				transform: translateY(0px);
+			}
+			.cs_btn {
+				opacity: 1;
+				transform: translateY(0px);
+				transition-delay: 500ms;
+			}
+		}
+		.item-img {
+			img {
+				transform: scale(1.1);
+			}
+		}
+	}
+}
+

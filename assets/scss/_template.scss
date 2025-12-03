@@ -1,0 +1,50 @@
+/*=========
+Font load
+===========*/
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+:root {
+	--tc-body-color: #74787C;
+	--tc-title-color: #1A1A1A;
+	--tc-heading: "Public Sans", sans-serif;
+	--tc-body-font: "Inter", sans-serif;
+	--tc-prime-c: #135CFD;
+	--tc-prime-c2: #AD4BFF;
+	--tc-prime-c3: #5550FF;
+	--tc-prime-c4: #3CEDB7;
+	--tc-gradient: linear-gradient(90deg, var(--tc-prime-c2) 0%, var(--tc-prime-c3) 100%);
+	--tc-gradient2: linear-gradient(90deg, var(--tc-prime-c3) 0%, var(--tc-prime-c2)100%);
+	--cube-1: cubic-bezier(0.55, 0.085, 0, 0.99);
+	--cube-2: all .25s cubic-bezier(.645,.045,.355,1);
+	--cube-3: cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+
+// Responsive Variables
+$over:'(min-width: 1800px)';
+$xxxl: 'only screen and (min-width: 1600px) and (max-width: 1799px)';
+$xxl: 'only screen and (min-width: 1400px) and (max-width: 1599px)';
+$xl: 'only screen and (min-width: 1200px) and (max-width: 1399px)';
+$lg: 'only screen and (min-width: 992px) and (max-width: 1199px)';
+$md:'only screen and (min-width: 768px) and (max-width: 991px)';
+$sm: 'only screen and (min-width: 576px) and (max-width: 767px)';
+$xs:'only screen and (min-width: 481px) and (max-width: 575px)';
+$xxs:'(max-width: 480px)';
+$xxxs:'(max-width: 360px)';
+@keyframes slideInUp {
+	0% {
+		opacity: 0;
+		-webkit-transform: translateY(250px);
+		-ms-transform: translateY(250px);
+		transform: translateY(250px);
+	}
+
+	100% {
+		-webkit-transform: translateY(0);
+		-ms-transform: translateY(0);
+		transform: translateY(0);
+	}
+} 
+.slideInUp {
+	-webkit-animation-name: slideInUp;
+	animation-name: slideInUp;
+}

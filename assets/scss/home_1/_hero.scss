@@ -1,0 +1,123 @@
+.tc-hero-sec {
+	height: 110vh;
+	padding-top: 88px;
+	background-color: #000;
+	@media #{$xxl,$xl,$lg,$md,$sm,$xs,$xxs} {
+		height: 100%;
+	}
+}
+.tc-hero-content {
+	z-index: 1;
+	@media #{$lg,$md,$sm,$xs} {
+		padding: 150px 15px;
+	}
+	@media #{$xxs} {
+		padding: 100px 15px;
+	}
+	.tc-hero-bg {
+		top: 0;
+		left: 0;
+		z-index: -1;
+		width: 100%;
+		height: 100%;
+		overflow: hidden;
+		border-radius: 20px;
+		@media #{$xxl,$xl,$lg,$md,$sm,$xs,$xxs} {
+			border-radius: 0;
+		}
+	}
+}
+.tc-hero-img-wrap {
+	gap: 0px; 
+	overflow: hidden;
+	border-radius: 20px;
+	.img-wrap {
+		width: 33.33%;
+	}
+	@media #{$lg,$md,$sm,$xs,$xxs} {
+		display: none !important;
+	}
+}
+.tc-hero-text {
+	z-index: 2;
+	left: 30px;
+	width: 50%;
+	bottom: 95px;
+	position: absolute;
+	@media #{$lg,$md,$sm,$xs,$xxs} {
+		width: 100%;
+		position: static;
+		margin-bottom: 40px;
+	}
+	.item-text {
+		h2 {
+			color: #fff;
+			font-size: 90px;
+			font-weight: 800;
+			line-height: 1;
+			padding-bottom: 15px;
+			letter-spacing: -2px;
+			text-transform: uppercase;
+			@media #{$lg,$md,$sm} {
+				font-size: 60px;
+			}
+			@media #{$xs} {
+				font-size: 45px;
+			}
+			@media #{$xxs} {
+				font-size: 40px;
+			}
+		}
+		h4 {
+			color: #fff;
+			font-size: 32px;
+			line-height: 1;
+			font-weight: 600;
+			font-style: italic;
+			letter-spacing: -1px;
+			@media #{$lg,$md,$sm,$xs,$xxs} {
+				font-size: 26px;
+			}
+		}
+	}
+}
+.tc-hero-item-wrap {
+	z-index: 2;
+	right: 52px;
+	width: 100%;
+	bottom: 52px;
+	max-width: 460px;
+	border-radius: 10px;
+	padding: 28px 28px 32px;
+	background-color: #E8ECF1;
+	@media #{$lg,$md,$sm,$xs,$xxs} {
+		position: static !important;
+	}
+	.inner-img {
+		overflow: hidden;
+		border-radius: 10px;
+		margin-bottom: 25px;
+	}
+	.inner-text {
+		color: #030F2B;
+		font-size: 18px;
+		margin-bottom: 30px;
+	}
+}
+.tc-hero-img2 {
+	.circle-shape {
+		top: 50%;
+		left: 0;
+		right: 0;
+		width: 350px;
+		height: 550px;
+		margin: 0 auto;
+		position: absolute;
+		border-radius: 300px;
+		background-color: #000;
+		transform: translateY(-50%);
+		@media #{$xxl,$xl,$lg,$md,$sm,$xs,$xxs} {
+			display: none;
+		}
+	}
+}
