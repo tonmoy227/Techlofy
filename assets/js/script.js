@@ -521,7 +521,7 @@ Last change:    00/00/00
 	})
 	EdProg
 	.from(".tc-work-p-item", {
-		yPercent: 100,
+		yPercent: -100,
 		opacity: 0,
 		ease: "back.out(1.5)",
 		duration: 1,
