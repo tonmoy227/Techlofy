@@ -1,3 +1,13 @@
+@keyframes bounceLR {
+	0%   { transform: translateX(0); }
+	50%  { transform: translateX(8px); }
+	100% { transform: translateX(0); }
+}
+@keyframes bounceLR2 {
+	0%   { transform: translateX(0); }
+	50%  { transform: translateX(-8px); }
+	100% { transform: translateX(0); }
+}
 .tc-counter-sec {
 	overflow: hidden;
 	margin-left: 24px;
@@ -46,9 +56,11 @@
 				position: absolute;
 				border-radius: 100%;
 				background-color: var(--tc-prime-c4);
+				animation:  bounceLR2 2s cubic-bezier(.68,-0.55,.27,1.55) infinite;
 			}
 			&:before {
 				left: 0px;
+				animation:  bounceLR 2s cubic-bezier(.68,-0.55,.27,1.55) infinite;
 				background-color: rgba(255, 255, 255, .16);
 			}
 		}

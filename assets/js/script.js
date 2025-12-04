@@ -217,8 +217,9 @@ Last change:    00/00/00
 		
 		const line1 = document.querySelector(".title_line_1");
 		const line2 = document.querySelector(".title_line_2");
+		const btn   = document.querySelector(".tc-about-text1 .tc-btn1");
 
-		if (line1 && line2) {
+		if (line1 && line2 && btn) {
 			const split1 = new SplitText(line1, {
 				type: "lines,words,chars",
 				linesClass: "split-line"
@@ -227,7 +228,10 @@ Last change:    00/00/00
 				type: "lines,words,chars",
 				linesClass: "split-line"
 			});
+
 			gsap.set([split1.chars, split2.chars], { opacity: 0, y: -7 });
+			gsap.set(btn, { opacity: 0, y: 20 });
+
 			const master = gsap.timeline({
 				scrollTrigger: {
 					trigger: ".tc-about-text1",
@@ -237,7 +241,9 @@ Last change:    00/00/00
 					markers: false
 				}
 			});
-			master.to(split1.chars, {
+
+			master
+			.to(split1.chars, {
 				opacity: 1,
 				x: 0,
 				duration: 1,
@@ -249,20 +255,31 @@ Last change:    00/00/00
 				opacity: 0,
 				duration: 0.8,
 				ease: "power1.out"
-			}, "+=0.3"); 
-			master.to(split2.chars, {
+			}, "+=0.3")
+
+			.to(split2.chars, {
 				opacity: 1,
 				x: 0,
-				duration: 1,
+				duration: 1.5,
 				stagger: 0.05,
 				ease: "power2.out"
 			}, ">")
 			.set(line2.querySelectorAll("span"), { color: "#3CEDB7" })
+
+        // 🔥 Make sure line 2 is visible
 			.to(line2, {
 				opacity: 1,
-				duration: 0.8,
+				duration: 1.5,
 				ease: "power1.out"
-			}, "+=0.3"); 
+			}, "+=0.3")
+
+        // 🚀 FINAL — Show Button AFTER everything
+			.to(btn, {
+				opacity: 1,
+				y: 0,
+				duration: 1.2,
+				ease: "power3.out"
+			}, "0");
 		}
 
 		var TechAB2 = gsap.timeline({
@@ -283,6 +300,10 @@ Last change:    00/00/00
 			spaceBetween: 12,
 			slidesPerView: 6,
 			loop: true,
+			autoplay: {
+				enabled: true,
+				delay: 3000
+			},
 			speed: 400,
 			breakpoints: {
 				'1600': {
@@ -488,6 +509,24 @@ Last change:    00/00/00
 		.from(el, {  scale: 1, y: "300"})
 	});
 
+
+
+	var EdProg = gsap.timeline({
+		scrollTrigger: {
+			trigger: ".tc-work-p-content",
+			start: "top 70%",
+			toggleActions: "play reverse play reverse",
+			markers: false,
+		},
+	})
+	EdProg
+	.from(".tc-work-p-item", {
+		yPercent: 100,
+		opacity: 0,
+		ease: "back.out(1.5)",
+		duration: 1,
+		stagger: -.2,
+	})
 
 
 })(jQuery);

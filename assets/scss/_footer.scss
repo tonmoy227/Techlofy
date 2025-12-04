@@ -22,31 +22,41 @@
 		background-color: rgba(255, 255, 255, .24);
 	}
 	h3 {
-		color: #fff;
-		line-height: 1;
-		font-size: 168px;
-		font-weight: 700;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		@media #{$md,$sm,$xs,$xxs} {
-			font-size: 130px;
-		}
-		i {
-			width: 168px;
-			height: 168px;
+		a {
+			color: #fff;
+			line-height: 1;
+			font-size: 168px;
+			font-weight: 700;
 			display: flex;
-			margin: 0px 30px;
-			border-radius: 100%;
-			align-items: center;
 			justify-content: center;
-			background-color: #222C43;
+			align-items: center;
 			@media #{$md,$sm,$xs,$xxs} {
-				width: 130px;
-				height: 130px;
+				font-size: 130px;
 			}
-			@media #{$sm,$xs,$xxs} {
-				display: none;
+			i {
+				width: 0px;
+				height: 0px;
+				display: flex;
+				margin: 0px 0px;
+				border-radius: 100%;
+				align-items: center;
+				justify-content: center;
+				background-color: #222C43;
+				transition: all 500ms ease-in-out;
+				@media #{$md,$sm,$xs,$xxs} {
+					width: 130px;
+					height: 130px;
+				}
+				@media #{$sm,$xs,$xxs} {
+					display: none;
+				}
+			}
+			&:hover {
+				i {
+					width: 168px;
+					height: 168px;
+					margin: 0px 30px;
+				}
 			}
 		}
 	}

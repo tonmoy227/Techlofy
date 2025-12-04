@@ -380,6 +380,22 @@ a {
 		font-size: 44px;
 		font-weight: 600;
 		line-height: 1.09;
+		letter-spacing: -1.5px;
+		@media #{$md} {
+			font-size: 42px;
+		}
+		@media #{$sm} {
+			font-size: 38px;
+		}
+		@media #{$xs} {
+			font-size: 34px;
+		}
+		@media #{$xxs} {
+			font-size: 30px;
+		}
+		@media #{$xxxs} {
+			font-size: 28px;
+		}
 	}
 	p {
 		padding-top: 22px;

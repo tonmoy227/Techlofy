@@ -1,3 +1,20 @@
+.tc-blog-sec {
+	z-index: 1;
+	margin-left: 24px;
+	margin-right: 24px;
+	position: relative;
+	&:before {
+		top: 0;
+		left: 0;
+		z-index: -1;
+		width: 100%;
+		content: '';
+		height: 70%;
+		position: absolute;
+		border-radius: 20px;
+		background: linear-gradient(180deg, #DDE7FF 0%, rgba(235, 242, 255, 0) 100%);
+	}
+}
 .tc-blog-item {
 	padding: 12px;
 	border-radius: 12px;

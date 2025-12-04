@@ -13,10 +13,48 @@
 	}
 }
 
+@keyframes line_animation {
+	0% {
+		top: 0px;
+		opacity: 1;
+	}
+	50% {
+		top: 50%;
+	}
+	100% {
+		top: 100%;
+		opacity: 1;
+	}
+}
+
+@keyframes line_animation_2 {
+	0% {
+		opacity: 1;
+		bottom: 0px;
+	}
+	50% {
+		bottom: 50%;
+	}
+	100% {
+		bottom: 100%;
+		opacity: 1;
+	}
+}
 .tc-work-p-item {
 	width: 25%;
+	position: relative;
 	padding: 40px 15px 35px 32px;
 	border-right: 1px solid #0D266533;
+	&:before {
+		top: 0;
+		right: -1px;
+		width: 1px;
+		content: '';
+		height: 23px;
+		position: absolute;
+		animation: line_animation 20s ease-out infinite;
+		background: linear-gradient(180deg, rgba(19, 92, 253, 0) 0%, #135CFD 100%);
+	}
 	@media #{$md,$sm,$xs,$xxs} {
 		width: 50%;
 		border: none;
@@ -30,6 +68,9 @@
 	}
 	&:last-child {
 		border-right: none;
+		&:before {
+			display: none;
+		}
 	}
 	span {
 		width: 40px;

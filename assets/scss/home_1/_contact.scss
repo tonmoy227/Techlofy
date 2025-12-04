@@ -25,6 +25,26 @@
 	.tc-contact-text {
 		max-width: 570px;
 	}
+	.tc-sec-title {
+		.sec_title {
+			font-size: 52px;
+			@media #{$md} {
+				font-size: 42px;
+			}
+			@media #{$sm} {
+				font-size: 38px;
+			}
+			@media #{$xs} {
+				font-size: 34px;
+			}
+			@media #{$xxs} {
+				font-size: 30px;
+			}
+			@media #{$xxxs} {
+				font-size: 28px;
+			}
+		}
+	}
 }
 .tc-contact-form {
 	padding: 40px;

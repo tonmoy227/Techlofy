@@ -36,7 +36,7 @@
 			border-radius: 12px;
 			background-color: #135CFD;
 			.accordion-button {
-				border-bottom: 1.5px dashed rgba(255, 255, 255, .40);
+				border-bottom: 2px dashed rgba(255, 255, 255, .40);
 			}
 			.accordion-body {
 				color: #fff;
@@ -104,7 +104,6 @@
 	.accordion-button:not(.collapsed) { 
 		color: #fff;
 		box-shadow: none;
-		border-radius: 12px;
 		span {
 			b {
 				color: rgba(255, 255, 255, .32);
